@@ -1,0 +1,406 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h2 {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 48px;
+  color: #18333e;
+}
+h3 {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 35px;
+
+  color: #18333e;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: 120px 1fr;
+  grid-template-areas:
+    "header header"
+    "aside main";
+}
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header-searchform {
+  display: flex;
+  align-items: center;
+  width: 668px;
+  height: 53px;
+  background: #e9f1fa;
+  border-radius: 26.5px;
+}
+.header-links-notifications {
+  width: 53px;
+  height: 53px;
+
+  border: 1px solid #b4bcc4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.header-searchform img {
+  margin: 0 17px 0 20px;
+}
+.header-links-delimetr {
+  width: 41px;
+  height: 0;
+  border: 1px solid #b4bcc4;
+  transform: rotate(90deg);
+}
+.header-links .header-links-settings {
+  width: 53px;
+  height: 53px;
+  background: #18333e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.header-searchform input {
+  background-color: #e9f1fa;
+  border: none;
+  height: 100%;
+  outline: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #18333e;
+}
+.header-links a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: #18333e;
+  text-decoration: none;
+}
+.header-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 450px;
+}
+.aside {
+  grid-area: aside;
+}
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 8fr 4fr;
+  grid-template-rows: 47px 1fr 180px 119px;
+  grid-template-areas:
+    "description forest"
+    "recomended forest"
+    "dates forest"
+    "player forest";
+  gap: 20px;
+  padding: 30px;
+}
+
+.main_description {
+  grid-area: description;
+  /* border: 1px solid black; */
+}
+
+.recommended span {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: #18333e;
+}
+.recommended {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 27px;
+}
+.recommended > div > div img:first-child {
+  margin-right: 12px;
+}
+.recommended > div > div img:nth-child(3) {
+  margin-top: 10px;
+}
+.recommended > div > img {
+  border-radius: 10%;
+}
+.recommended > div > div {
+  display: flex;
+  align-items: center;
+}
+.recomended > nav a {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  text-decoration: none;
+  color: #18333e;
+  margin-right: 57px;
+}
+.recomended {
+  grid-area: recomended;
+  /* border: 1px solid black; */
+}
+.dates {
+  grid-area: dates;
+}
+.player {
+  grid-area: player;
+  /* border: 1px solid black; */
+}
+.forest {
+  grid-area: forest;
+  /* border: 1px solid black; */
+}
+.aside > div a {
+  margin-left: 16px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+
+  color: #18333e;
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.aside > div > div {
+  margin-top: 65px;
+}
+.aside > .SignOut > div {
+  margin-top: 210px;
+}
+.dates > .dates_date h2 {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 48px;
+  color: #18333e;
+}
+.dates_date button {
+  width: 175px;
+  height: 48px;
+  background-color: #e5e5e5;
+  border: 1px solid #b4bcc4;
+  border-radius: 24px;
+  cursor: pointer;
+}
+.dates_date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dates-weekly {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 111px;
+  margin-top: 43px;
+}
+.dates-weekly > button:hover strong,
+.dates-weekly > button:hover span {
+  color: #fff;
+}
+.dates-weekly > button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  padding: 18px 15px;
+}
+.dates-weekly > button:hover {
+  background: #18333e;
+  border-radius: 32px;
+  padding: 18px 15px;
+}
+.dates-weekly span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #18333e;
+  opacity: 0.7;
+}
+.dates-weekly strong {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 40px;
+  color: #18333e;
+}
+.player {
+  display: grid;
+  grid-template-columns: 457px 118px 118px;
+  gap: 45px;
+}
+.play {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #18333e;
+  border-radius: 25px;
+  padding-right: 24px;
+}
+.play > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.play > div > img {
+  margin: 0 24px;
+  border-radius: 10px;
+}
+.play p,
+.play span {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 29px;
+  margin-bottom: 7px;
+  color: #ffffff;
+}
+.play_muz,
+.play_vid {
+  border-radius: 10px;
+}
+.play_muz {
+  background-image: url(./img/noch.png);
+}
+.play_vid {
+  background-image: url(./img/goro.png);
+}
+.forest_bg {
+  width: 390px;
+  height: 290px;
+  background-image: url(https://worldmarine.ru/image/catalog/upload/images/Airbus_ACJ319_Elegance_Lounge_3.jpg);
+  padding: 30px 30px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.forest_bg > div:first-child {
+  display: flex;
+  justify-content: flex-end;
+}
+.forest_bg > div > div {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.49);
+}
+.forest_bg > div:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: rgba(255, 255, 255, 0.49);
+  border-radius: 10px;
+  padding: 10px 0;
+}
+.brazil-forest {
+  margin: 20px 0 30px;
+}
+.brazil-forest > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.forest-person {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 61px;
+}
+.forest-person button {
+  width: 175px;
+  height: 61px;
+  background: #18333e;
+  border-radius: 30.5px;
+  border: none;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 29px;
+  color: #ffffff;
+}
+.forest-places > div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 44px;
+}
+.forest-places > div > div{
+  display: flex;
+  align-items: center;
+}
+.forest-places > div > div > img{
+  margin-right: 6px;
+  border-radius: 30px;
+}
+.forest-places > div > div >div > div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.forest_places > div >div:last-child{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: black;
+}
+.recomended{
+  margin-right: 20px;
+}
+.recomended > p{
+  color: #1f2327;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+
+}
+.recommended p{
+font-size: 30px;
+}
+
+.malenk{
+  width: 64px;
+  height: 47px;
+  border-radius: 17px;
+}
+.osnov{
+  width: 241px;
+  height: 322px;
+  
+}
+.forest_bg{
+  width: 100%;
+}
+.aer{
+  width: 126px;
+  height: 92px;
+  border-radius: 10px;
+}
+.btn_a{
+  text-decoration: none;
+  color: #b4bcc4;
+  background-color: #18333e;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  padding-top: 16px;
+  border-radius: 10px;
+}
